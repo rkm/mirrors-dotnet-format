@@ -1,0 +1,11 @@
+./format.sln
+--fix-whitespace
+--fix-style
+--fix-analyzers
+--exclude
+./tests/projects/
+--check
+--report
+./artifacts/log/
+-v
+diag

@@ -1,0 +1,95 @@
+{
+  // Use IntelliSense to find out which attributes exist for C# debugging
+  // Use hover for the description of the existing attributes
+  // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "format -f --check",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      // If you have changed target frameworks, make sure to update the program path.
+      "program": "${workspaceFolder}/artifacts/bin/dotnet-format/Debug/netcoreapp2.1/dotnet-format.dll",
+      "args": [
+        "-f",
+        "-v",
+        "diag",
+        "--check"
+      ],
+      "cwd": "${workspaceFolder}/src",
+      // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "justMyCode": false
+    },
+    {
+      "name": "format format.sln --check",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      // If you have changed target frameworks, make sure to update the program path.
+      "program": "${workspaceFolder}/artifacts/bin/dotnet-format/Debug/netcoreapp2.1/dotnet-format.dll",
+      "args": [
+        "format.sln",
+        "-v",
+        "diag",
+        "--check"
+      ],
+      "cwd": "${workspaceFolder}",
+      // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "justMyCode": false
+    },
+    {
+      "name": "format format.sln --fix-style warn --check",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      // If you have changed target frameworks, make sure to update the program path.
+      "program": "${workspaceFolder}/artifacts/bin/dotnet-format/Debug/netcoreapp2.1/dotnet-format.dll",
+      "args": [
+        "format.sln",
+        "--fix-whitespace",
+        "--fix-style",
+        "warn",
+        "-v",
+        "diag",
+        "--check"
+      ],
+      "cwd": "${workspaceFolder}",
+      // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "justMyCode": false
+    },
+    {
+      "name": "format format.sln --fix-analyzers warn --check",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      // If you have changed target frameworks, make sure to update the program path.
+      "program": "${workspaceFolder}/artifacts/bin/dotnet-format/Debug/netcoreapp2.1/dotnet-format.dll",
+      "args": [
+        "format.sln",
+        "--fix-analyzers",
+        "warn",
+        "-v",
+        "diag",
+        "--check"
+      ],
+      "cwd": "${workspaceFolder}",
+      // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "justMyCode": false
+    },
+    {
+      "name": ".NET Core Attach",
+      "type": "coreclr",
+      "request": "attach",
+      "processId": "${command:pickProcess}"
+    }
+  ]
+}
