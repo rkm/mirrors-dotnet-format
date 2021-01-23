@@ -1,4 +1,21 @@
-﻿## dotnet-format
+﻿### Note
+
+This is a mirror of the [dotnet/format](https://github.com/dotnet/format) repo to add support for [pre-commit](https://pre-commit.com/). Please report any issues with the underlying tool over there!
+
+To use this with pre-commit, add this to your .pre-commit-config.yaml file:
+
+```yaml
+repos:
+-   repo: https://github.com/dotnet/format
+    rev: "v4.0.130203"  # Or a more recent commit sha
+    hooks:
+    -   id: dotnet-format
+        args: [--include]
+```
+
+---
+
+## dotnet-format
 <img width="480" alt="dotnet-format" src="https://user-images.githubusercontent.com/9797472/61659851-6bbdc880-ac7d-11e9-95f7-d30c7de1a18a.png">
 
 [![Nuget](https://img.shields.io/nuget/v/dotnet-format.svg)](https://www.nuget.org/packages/dotnet-format)
