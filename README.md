@@ -30,7 +30,7 @@ repos:
 ### New in v5.0.211103
 
 ### New Features
-- Can now apply codestyle codefixes automatically with `dotnet format --fix-codestyle`
+- Can now apply codestyle codefixes automatically with `dotnet format --fix-style`
 - Can now apply analyzer codefixes automatically with `dotnet format --fix-analyzers`
 
 ### Breaking Changes
